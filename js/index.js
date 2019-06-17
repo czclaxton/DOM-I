@@ -55,6 +55,11 @@ navLinks[3].innerHTML = siteContent["nav"]["nav-item-4"];
 navLinks[4].innerHTML = siteContent["nav"]["nav-item-5"];
 navLinks[5].innerHTML = siteContent["nav"]["nav-item-6"];
 
+let links = document.querySelectorAll('a');
+for(let i=0; i<links.length; i++) {
+links[i].style.color = "green";
+};
+
 let headerText = document.getElementsByTagName('h1');
 headerText[0].innerHTML = siteContent["cta"]["h1"];
 
