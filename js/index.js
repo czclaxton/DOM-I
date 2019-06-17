@@ -60,6 +60,11 @@ for(let i=0; i<links.length; i++) {
 links[i].style.color = "green";
 };
 
+let badTextColor = document.querySelectorAll('p');
+for(let i=0; i<links.length; i++) {
+  badTextColor[i].style.color = "orange";
+  };
+
 let headerText = document.getElementsByTagName('h1');
 headerText[0].innerHTML = siteContent["cta"]["h1"];
 
@@ -86,4 +91,13 @@ p[7].innerHTML = siteContent["contact"]["email"];
 p[8].innerHTML = siteContent["footer"]["copyright"];
 
 
+let newAnchor = document.querySelector('nav');
+
+let newLink = document.createElement('a');
+newLink.textContent = 'New Link B';
+newAnchor.appendChild(newLink);
+
+let newLink2 = document.createElement('a');
+newLink2.textContent = 'New Link A';
+newAnchor.prepend(newLink2);
 
