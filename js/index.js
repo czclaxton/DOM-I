@@ -40,3 +40,64 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let headerImage = document.getElementById("cta-img");
+headerImage.setAttribute('src',siteContent["cta"]["img-src"] )
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', "img/mid-page-accent.jpg")
+
+let navLinks = document.getElementsByTagName('a');
+navLinks[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navLinks[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navLinks[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navLinks[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navLinks[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navLinks[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+let links = document.querySelectorAll('a');
+for(let i=0; i<links.length; i++) {
+links[i].style.color = "green";
+};
+
+let badTextColor = document.querySelectorAll('p');
+for(let i=0; i<links.length; i++) {
+  badTextColor[i].style.color = "orange";
+  };
+
+let headerText = document.getElementsByTagName('h1');
+headerText[0].innerHTML = siteContent["cta"]["h1"];
+
+let button = document.getElementsByTagName('button');
+button[0].innerHTML = siteContent["cta"]["button"];
+
+let h4 = document.getElementsByTagName('h4');
+h4[0].innerHTML = siteContent["main-content"]["features-h4"];
+h4[1].innerHTML = siteContent["main-content"]["about-h4"];
+h4[2].innerHTML = siteContent["main-content"]["services-h4"];
+h4[3].innerHTML = siteContent["main-content"]["product-h4"];
+h4[4].innerHTML = siteContent["main-content"]["vision-h4"];
+h4[5].innerHTML = siteContent["contact"]["contact-h4"];
+
+let p = document.getElementsByTagName('p');
+p[0].innerHTML = siteContent["main-content"]["features-content"];
+p[1].innerHTML = siteContent["main-content"]["about-content"];
+p[2].innerHTML = siteContent["main-content"]["services-content"];
+p[3].innerHTML = siteContent["main-content"]["product-content"];
+p[4].innerHTML = siteContent["main-content"]["vision-content"];
+p[5].innerHTML = siteContent["contact"]["address"];
+p[6].innerHTML = siteContent["contact"]["phone"];
+p[7].innerHTML = siteContent["contact"]["email"];
+p[8].innerHTML = siteContent["footer"]["copyright"];
+
+
+let newAnchor = document.querySelector('nav');
+
+let newLink = document.createElement('a');
+newLink.textContent = 'New Link B';
+newAnchor.appendChild(newLink);
+
+let newLink2 = document.createElement('a');
+newLink2.textContent = 'New Link A';
+newAnchor.prepend(newLink2);
+
